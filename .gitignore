@@ -31,11 +31,14 @@ _testmain.go
 .idea/workspace.xml
 **/.idea/workspace.xml
 
-#extra folder that i created wrongly
+#extra folder that rezemon created wrongly
 01_helloWorld/
 04_helloWorld/
 03_helloWorld/
 02_helloWorld/
+
+#file that rezemon want to ignore
+history*.*
 
 # mac hidden files
 .DS_Store
