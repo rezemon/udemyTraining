@@ -1,0 +1,3 @@
+hi , my name is lee
+date  : 22nov2018, 1849pm,
+first learning of GITHUB commit, it is cool
