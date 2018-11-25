@@ -40,6 +40,11 @@ func average2(aParam ...float64) float64 {
 		  and it return , an INDEX and a VALUE
 			because this is a LIST
 	*/
+	/*
+	   for i,v := range aParam
+	   i is holding the index of the range
+	   v is hold the value of the range
+	*/
 	for i, v := range aParam {
 		fmt.Println("index = ", i, "value =", v)
 		total += v
