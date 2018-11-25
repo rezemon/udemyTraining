@@ -58,4 +58,29 @@ func main() {
 	}
 
 	fmt.Println(phoneBook)
+
+	student := make([]string, 0)
+	students := make([][]string, 0)
+	fmt.Println(student)
+	fmt.Println(students)
+	fmt.Println((student == nil))
+
+	var studentB []string
+	fmt.Println(studentB == nil)
+
+	studentC := []string{}
+	fmt.Println(studentC == nil) //suppose to be nil according to tutorial
+	//make establish the POINTER to the underlying array
+	//thus for make it is NOT nil
+	// though it is not nil
+	// UNLIKE make, it did not point to the underlying array
+	//if you perform an index reference , you get an error
+	//but if you APPEND to it, it is fine
+	//golang will know that you want to put something
+	//and intelligently will create the underlying array
+	//and append the first item to it
+
+	//studentD := []string //ERROR NOT ALLOWED
+	// fmt.Println((studentD == nil))
+
 }
