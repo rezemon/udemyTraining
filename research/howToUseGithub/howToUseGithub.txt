@@ -1,0 +1,21 @@
+atom is good
+and github is good
+all will be record if i can push the information to github
+
+here it teaches
+i got a github account
+i create a repository
+
+i have 2 computer
+computer A at home
+computer B at work
+how to keep the 2 computer in sync
+meaning i have to create another atom in the lenovo s30 - 32gb
+
+github
+better solution
+git and github is tracking all the changes
+they going to keep everything in sync AUTOMATICALLY
+but if there is a conflict
+example, changing on the same line,
+git and github will ASK YOU TO RESOLVE THE conflict
