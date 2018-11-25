@@ -51,4 +51,9 @@ func main() {
 	// the same line with this syntax.
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
+
+	//resources
+	//https://www.golang-book.com/books/intro/6
+	//https://www.golang-book.com/books/intro/6
+
 }
