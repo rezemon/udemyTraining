@@ -22,4 +22,14 @@ func main(){
   fmt.Printf("%T",realletterTWO)
   fmt.Println()
 
+  runeletterTWO := rune("HABC or anything"[0]) //72
+  fmt.Println(runeletterTWO)
+  fmt.Printf("%T",runeletterTWO)
+  fmt.Println()
+
+  for i:=65;i<=122;i++{
+    fmt.Println(i, " - ", string(i), " - ", i%12)
+  }
+
+
 }
