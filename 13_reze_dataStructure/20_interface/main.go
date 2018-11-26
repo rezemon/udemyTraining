@@ -163,4 +163,21 @@ github.com/GoesToEleven/udemyTraining/13_reze_dataStructure/20_interface
 //The first is so that the method can modify the value that its receiver points to.
 aMe.AssignName("Rezemon Lee")
 fmt.Println("alias for lee chuan boon", aMe.Name)
+
+//instead of using a Slice of ANIMAL INTERFACE
+//we could define a func
+//to demo the abstractions
+//it will just call method of Speak()
+//but today Dog speak "Woof Woof"
+//future changes in implementation
+//Dog can speak "Bark Bark"
+
+AnimalSound(aDog) //aDog is a pointer , the implementation is a POINTER RECEIVER
+AnimalSound(aMe)
+}
+
+//a function that has param of "Animal interface"
+func AnimalSound(aAnimal Animal){
+  aString := aAnimal.Speak()
+  fmt.Println(aString)
 }
