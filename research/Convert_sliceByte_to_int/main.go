@@ -97,7 +97,7 @@ func main() {
 	fmt.Println("aStrByteThree = ", aStrByteThree)
 	fmt.Println("aStrByteThree string = ", string(aStrByteThree))
 
-	for i := 1; i <= 30; i++ {
+	for i := 1; i <= 60; i++ {
 		aStrByteThree[2]++
 		fmt.Println("aStrByteThree string = ", string(aStrByteThree))
 	}
