@@ -39,6 +39,9 @@ func main(){
 
  //var AA interface{} //var AA of type empty interface
  var BB interface{} //it must be a empty interface
+ fmt.Printf("%T",BB) //empty interface is of type ="nil"
+ fmt.Println()
+// describe(BB)
  DoSomething(BB)
 
  var CC interface{

@@ -70,3 +70,8 @@ e.g. reader interface, ..
 
 due to too many mentioning of interface, i need to go read this up
 and have a SUPER understanding of it because i continue
+
+==
+composition
+today 27nov2018, talked to tian hoe, learn something abt interface ..
+hmm..should be in interface
