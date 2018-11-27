@@ -78,6 +78,7 @@ aNewEncoder.Encode(p1)
 //above also can be written in the following manner
 p2 := Person{"wong","ken meng",34}
 json.NewEncoder(os.Stdout).Encode(p2)
+//above , execute, read from LEFT to RIGHT
 
 //so now what is a writer
 //this will write to a place , so we can send it out
