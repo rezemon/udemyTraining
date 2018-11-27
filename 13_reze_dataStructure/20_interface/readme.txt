@@ -1,4 +1,49 @@
 
+
+27nov2018 2358pm
+https://www.ardanlabs.com/blog/2015/09/composition-with-go.html
+
+Notice the Fasten method requires a value of interface type NailDriver
+and we are passing a value of interface type NailDrivePuller.
+This is possible because the compiler knows that any concrete type value
+that can be stored inside a NailDrivePuller interface value
+must MUST MUST MUST also implement the NailDriver interface.
+Therefore, the compiler accepts the method call and
+the assignment between these two interface type values.
+
+without programming, i am going to try to interpret this according to my own
+type Printer interface {
+  Print()
+}
+to be a printer must implement method Print
+
+type Fax interface {
+  Fax()
+}
+
+PrinterFax interface {
+  Printer
+  Fax
+}
+
+if we have a
+type Struct Employee{
+}
+and Employee has a func
+//func (Contractor) Fasten(d NailDriver, nailSupply *int, b *Board) {
+func (Employee) SendFax(f Fax){
+
+}
+the param take a param of Fax interface
+if we passed in a PrinterFax interface, it will still work
+This is possible because the compiler knows that any concrete type value
+that can be stored inside a PrinterFax interface value
+must MUST MUST MUST also implement the Fax interface.
+Therefore, the compiler accepts the method call and
+the assignment between these two interface type values.
+
+===
+
 what about the concept
 ANY type is a interface
 because interface is a type

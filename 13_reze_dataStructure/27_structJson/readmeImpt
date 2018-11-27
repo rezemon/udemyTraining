@@ -1,0 +1,61 @@
+https://godoc.org/encoding/json
+https://godoc.org/encoding/json
+https://godoc.org/encoding/json
+
+28nov2018 0207am
+
+type Encoder struct{
+ //contains filtered or unexported fields
+}
+(w io.Writer)
+a writer is like
+a response from webserver to our client
+Writer write from SERVER to WEB BROWSER
+func NewEncoder(w io.Writer) *Encoder
+ENCODER = human TO computer (so to send over the internet)
+above is a function that accept a param "io.Writer"
+and create a POINTER TO Encoder
+create a POINTER TO ENCODER
+create a POINTER TO ENCODER
+*Encoder ==>Encoder is a pointer receiver
+if we pass something to *Encoder
+normally the format is &variable
+meaning passing the address of the variable to *Encoder
+
+func(enc *Encoder) Encode(v interface{}) error
+above is a func , it is related to a STRUCT called "*Encoder"
+it take a param of v which is a interface{}
+interface{} probably pointing to something that HUMAN understand
+in the of golang, interface{} is probably in the form of "STRUCT"
+becoz , we represent JSON via STRUCT
+Encode write the JSON encoding of v to the stream
+and STREAM is what acutally travel on the internet from point A to point B
+if we send JSON without encoding, then from point A to point B
+any hacker can intercept and read the data in plain text
+
+we going ENCODE it and write it to the w io.Writer (from server to client)
+and the output of this func is a "error"
+
+==
+above now , EVERYTHING OPPOSITE
+
+type Decoder struct{
+ //contains filtered or unexported fields
+}
+a decoder reads and decodes input stream to JSON objects
+
+func NewDecode(r io.Reader) *Decoder
+io.Reader is like some API send us a JSON
+and we decode it to a stream
+so generalize
+Reader read from WEB to SERVER
+
+so we take a param "r io.Reader", and the output is a pointer to *Decoder
+and now, we have a pointer to the *Decoder
+we have a few methods that can work on *Decoder
+e.g.
+func(*Decoder)Buffered
+func(*Decoder)Decode
+func (dec *Decoder) Decode(v interface{}) error
+it will put the DECODED VALUE into "v interface{}"
+"v interface{}" is probably a STRUCT of JSON
