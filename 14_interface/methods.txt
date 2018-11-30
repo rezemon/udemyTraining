@@ -1,0 +1,29 @@
+https://golang.org/ref/spec#Method_sets
+Method sets
+A type may have a method set associated with it.
+The method set of an interface type is its interface.
+The method set of any other type T consists of all methods declared with receiver type T.
+/*
+type Shape interface {
+  perimeter() float64
+  area() float64
+  volume() float64
+}
+
+type circle struct{
+  side float64
+}
+
+func (c circle) perimeter() float64{ ... }
+func (c circle) area() float64{ ... }
+func (c circle) volume() float64{ ... }
+ */
+The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T).
+Further rules apply to structs containing embedded fields, as described in the section on struct types.
+Any other type has an empty method set. In a method set, each method must have a unique non-blank method name.
+
+The method set of a type determines the interfaces that the type implements
+and the methods that can be called using a receiver of that type.
+
+Effective Go
+methods can be defined for ANY named type

@@ -1,46 +1,49 @@
 package main
 
-import(
-  "fmt"
-  "github.com/GoesToEleven/udemyTraining/_myTools/Describe"
+import (
+	"fmt"
+
+	"github.com/GoesToEleven/udemyTraining/_myTools/Describe"
 )
 
-type Shape interface{
-  area(aInt int) int
+// Shape is something i will describe later
+type Shape interface {
+	area(aInt int) int
 }
 
-type Square struct{
-  side int
+type Square struct {
+	side int
 }
 
-func (s *Square) area (sInt int) int{
-  s.side = sInt
-  return s.side * s.side
-}
-type Circle struct{
-  side int
+func (s *Square) area(sInt int) int {
+	s.side = sInt
+	return s.side * s.side
 }
 
-func (c Circle) area (cInt int) int{
-  return c.side * 10
+type Circle struct {
+	side int
 }
 
-func main()  {
-  fmt.Println("learning interface")
-  //var aSquare *Square
-  //aTempSquare := Square{3}
-  aSquare := Square{2}
-  fmt.Println(aSquare.area(aSquare.side))
+func (c Circle) area(cInt int) int {
+	return c.side * 10
+}
 
-  var aTempInt  int
-  aTempInt = shapeArea(&aSquare, 3)
-  myTools.Describe(aTempInt)
+func main() {
+	fmt.Println("learning interface")
+	//var aSquare *Square
+	//aTempSquare := Square{3}
+	aSquare := Square{2}
+	fmt.Println(aSquare.area(aSquare.side))
 
-  aTempInt= aSquare.area(4)
-  myTools.Describe(aTempInt)
+	var aTempInt int
+	aTempInt = shapeArea(&aSquare, 3)
+	myTools.Describe(aTempInt)
 
-  aTempInt= shapeArea(&aSquare,5)
-myTools.Describe(aTempInt)
+	aTempInt = aSquare.area(4)
+	myTools.Describe(aTempInt)
+
+	aTempInt = shapeArea(&aSquare, 5)
+	myTools.Describe(aTempInt)
 
 }
 
@@ -72,7 +75,7 @@ The user is providing the behavior of the tooling and the Fasten method is provi
 my method is correct, Shape is the interface (likewise NailDriver is the interface)
 nailSupply *int , b *Board are information from the Contrete type , like the Mallet and Crowbar
 take note how they talk about conrete type
- */
-func shapeArea(aShapeInterface Shape, aShapeValue int) int{
-  return aShapeInterface.area(aShapeValue)
+*/
+func shapeArea(aShapeInterface Shape, aShapeValue int) int {
+	return aShapeInterface.area(aShapeValue)
 }
