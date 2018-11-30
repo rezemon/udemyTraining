@@ -1,0 +1,35 @@
+https://godoc.org/io#Reader
+https://godoc.org/io#Reader
+
+Reader is the interface that wraps the basic Read method.
+Reader is the interface that wraps the basic Read method.
+
+type Read interface{
+ Read(p []byte) (n int, err error)
+}
+
+https://godoc.org/io#Writer
+
+type Writer interface {
+    Write(p []byte) (n int, err error)
+}
+
+https://godoc.org/net/http#Handler
+
+when we are doing web app, we will need to use the Handler interface
+type Handler interface {
+   ServerHTTP(ResponseWriter, * Request)
+}
+a Handler responds to a HTTP request
+
+sort package
+REZE: golang, seems to be #Xxx, Xxx is a interface
+https://godoc.org/sort#Interface
+
+sort interface. how does it works?
+type Interface interface{
+
+}
+https://godoc.org/sort#Interface
+https://godoc.org/sort#Interface
+above we talking about Package Sort

@@ -1,3 +1,21 @@
+30nov2018 0041am
+INTERFACE are a type
+type Shape interface{
+
+}
+meaning you can create a type that is interface
+
+##############################################################
+ANY STRUCT that has that method is implementing that interface
+ANY STRUCT that has that method is implementing that interface
+ANY STRUCT that has that method is implementing that interface
+Struct Square implement the Shape interface
+Struct Square implement the Shape interface
+Struct Square implement the Shape interface
+##############################################################
+
+===
+
 28nov2018 1937pm
 learning interface
 interface as mentioned by one veteran
