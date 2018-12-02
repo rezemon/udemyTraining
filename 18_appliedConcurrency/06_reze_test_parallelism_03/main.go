@@ -19,6 +19,11 @@ import (
 	"sync"
 )
 
+/*
+my error , could be because the chan int, can put many things
+in this scenario, i only want to have 1 thing
+so, make(chan int,1)
+*/
 var aToken int
 var count int
 var wg sync.WaitGroup
@@ -29,9 +34,10 @@ var BC chan int
 var CA chan int
 
 func main() {
-	AB = make(chan int) //a channel
-	BC = make(chan int)
-	CA = make(chan int)
+	//after i limit it to a single buffer, it can run up to 647 times or 81 times, OCCASIONALLY
+	AB = make(chan int, 1) //a channel
+	BC = make(chan int, 1)
+	CA = make(chan int, 1)
 	aToken = 8
 	//aCh := make(chan int)
 

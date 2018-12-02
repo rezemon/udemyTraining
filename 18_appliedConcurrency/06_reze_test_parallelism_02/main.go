@@ -72,9 +72,7 @@ func gorAput() {
 		if n == aToken {
 			AB <- n
 			fmt.Println("put to AB")
-			mutex.Lock()
-			count++
-			mutex.Unlock()
+
 		}
 	}
 }
@@ -84,9 +82,7 @@ func gorBput() {
 		if n == aToken {
 			BC <- n
 			fmt.Println("put to BC")
-			mutex.Lock()
-			count++
-			mutex.Unlock()
+
 		}
 	}
 }
@@ -96,9 +92,6 @@ func gorCput() {
 		if n == aToken {
 			CA <- n
 			fmt.Println("put to CA")
-			mutex.Lock()
-			count++
-			mutex.Unlock()
 		}
 	}
 }
