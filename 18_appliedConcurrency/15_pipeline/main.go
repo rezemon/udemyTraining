@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"github.com/GoesToEleven/udemyTraining/_myTools/Describe"
 )
 
 func main() {
@@ -9,9 +9,27 @@ func main() {
 	c := gen(2, 3, 4, 5)
 	cSq := sq(c)
 
-	for n := range cSq {
-		fmt.Println("square of list = ", n)
+	/*
+	   when i range in this manner, the n will get the integer
+	   if i want the channel itself
+	   i have to use
+	   for index, value := range cSq , the value will be the channel ???
+	*/
+	if true {
+		for n := range cSq {
+			//fmt.Println("square of list = ", n)
+			myTools.Describe(n)
+		}
 	}
+
+	/* DONT WORK???
+	if false {
+		for _, value := range cSq {
+			//fmt.Println("square of list = ", n)
+			myTools.Describe(value)
+		}
+	}
+	*/
 }
 
 func gen(alist ...int) chan int {
